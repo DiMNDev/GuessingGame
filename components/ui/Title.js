@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Dimensions } from "react-native";
 import Colors from "../../constants/colors";
 
 function Title({ children, containerStyle, textStyle }) {
@@ -9,8 +9,11 @@ function Title({ children, containerStyle, textStyle }) {
   );
 }
 
+const deviceHeight = Dimensions.get("window").height;
+
 const styles = StyleSheet.create({
   titleContainer: {
+    marginTop: deviceHeight * 0.05,
     backgroundColor: Colors.primary600,
     borderRadius: 16,
     borderColor: Colors.primary700,
@@ -22,6 +25,7 @@ const styles = StyleSheet.create({
     color: Colors.accent500,
     textAlign: "center",
     padding: 12,
+    maxWidth: "80%",
   },
 });
 
