@@ -6,9 +6,8 @@ function Card({ children, style }) {
 
 const styles = StyleSheet.create({
   card: {
-    justifyContent: "center",
     alignItems: "center",
-    marginTop: 100,
+    marginTop: 10,
     marginHorizontal: 24,
     padding: 16,
     backgroundColor: Colors.primary600,
