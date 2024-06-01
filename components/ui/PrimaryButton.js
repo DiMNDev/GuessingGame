@@ -9,9 +9,6 @@ function PrimaryButton({ children, onPress, style }) {
     onPress();
   }
 
-  function colorChangeHandler(color) {
-    setTextColor(color);
-  }
   return (
     <View style={[styles.buttonOuterContainer, style]}>
       <Pressable
