@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Dimensions } from "react-native";
 import Colors from "../../constants/colors";
 
 function GuessContainer({ children }) {
@@ -8,6 +8,8 @@ function GuessContainer({ children }) {
     </View>
   );
 }
+
+const deviceWidth = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
   container: {
@@ -19,8 +21,8 @@ const styles = StyleSheet.create({
     borderWidth: 4,
   },
   text: {
-    fontSize: 24,
-    fontWeight: "bold",
+    fontFamily: "open-sans-bold",
+    fontSize: 36,
     color: Colors.accent500,
     textAlign: "center",
     padding: 12,
