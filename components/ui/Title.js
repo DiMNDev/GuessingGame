@@ -4,9 +4,8 @@ import { useState } from "react";
 
 function Title({ children, containerStyle, textStyle }) {
   const { width, height } = useWindowDimensions();
-  const titleFlex = height < 500 ? { flex: 1 } : { flex: 0 };
   return (
-    <View style={[styles.titleContainer, titleFlex, containerStyle]}>
+    <View style={[styles.titleContainer, containerStyle]}>
       <Text style={[styles.title, textStyle]}>{children}</Text>
     </View>
   );
@@ -27,7 +26,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: Colors.accent500,
     textAlign: "center",
-    padding: 12,
+    padding: 10,
     maxWidth: "80%",
   },
 });

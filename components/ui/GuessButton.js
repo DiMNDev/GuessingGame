@@ -38,17 +38,16 @@ const styles = StyleSheet.create({
     marginHorizontal: 28,
   },
   buttonInnerContainer: {
-    flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    width: 100,
+    width: 75,
+    height: 75,
     padding: 4,
     backgroundColor: Colors.primary600,
     elevation: 2,
   },
   buttonText: {
     fontWeight: "bold",
-    fontSize: 48,
   },
   pressed: {
     opacity: 0.95,

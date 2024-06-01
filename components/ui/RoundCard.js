@@ -1,9 +1,14 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, useWindowDimensions } from "react-native";
 import Colors from "../../constants/colors";
 
 function RoundCard({ guess, hol, index }) {
+  const { width, height } = useWindowDimensions();
+
+  const marginBottom =
+    height < 500 ? { marginBottom: 20 } : { marginBottom: 0 };
+
   return (
-    <View style={styles.roundContainer}>
+    <View style={[styles.roundContainer, marginBottom]}>
       <Text style={styles.text}>Round {index * -1}</Text>
       <View style={styles.rowContainer}>
         <Text style={[styles.text, { fontSize: 20 }]}>
@@ -37,6 +42,7 @@ const styles = StyleSheet.create({
   },
   rowContainer: {
     flexDirection: "row",
+    height: 22,
   },
   text: {
     fontFamily: "open-sans-bold",
