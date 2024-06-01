@@ -78,11 +78,11 @@ function GameScreen({ userNumber, gameOver, incrementRounds, roundsData }) {
       </View>
       <View style={styles.buttonsContainer}>
         <GuessButton callback={nextGuessHandler.bind(this, "higher")}>
-          <Ionicons name="add" size={48} color="white" />
+          <Ionicons name="add" size={48} />
         </GuessButton>
         <GuessContainer>{currentGuess}</GuessContainer>
         <GuessButton callback={nextGuessHandler.bind(this, "lower")}>
-          <Ionicons name="remove" size={48} color="white" />
+          <Ionicons name="remove" size={48} />
         </GuessButton>
       </View>
       {/* <View>LOG ROUNDS</View> */}

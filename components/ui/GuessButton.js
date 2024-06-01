@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import Colors from "../../constants/colors";
 
@@ -5,18 +6,24 @@ function GuessButton({ children, style, callback }) {
   const pressHandler = () => {
     callback();
   };
+  const [textColor, setTextColor] = useState("white");
+
   return (
     <View style={[styles.buttonOuterContainer, style]}>
       <Pressable
-        onPress={pressHandler}
         style={({ pressed }) =>
           pressed
             ? [styles.pressed, styles.buttonInnerContainer]
             : styles.buttonInnerContainer
         }
+        onPress={pressHandler}
+        onPressIn={() => setTextColor(Colors.primary800)}
+        onPressOut={() => setTextColor("white")}
         android_ripple={{ color: Colors.primary600 }}
       >
-        <Text style={styles.buttonText}>{children}</Text>
+        <Text style={[styles.buttonText, { color: textColor }]}>
+          {children}
+        </Text>
       </Pressable>
     </View>
   );
@@ -40,12 +47,11 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   buttonText: {
-    color: "white",
     fontWeight: "bold",
     fontSize: 48,
   },
   pressed: {
-    opacity: 0.75,
+    opacity: 0.95,
   },
 });
 
