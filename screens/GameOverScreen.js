@@ -1,4 +1,11 @@
-import { View, Text, Image, ScrollView, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Dimensions,
+} from "react-native";
 import Colors from "../constants/colors";
 import Card from "../components/ui/Card";
 import PrimaryButton from "../components/ui/PrimaryButton";
@@ -52,6 +59,9 @@ function GameOverScreen({ rounds, userNumber, resetGame, roundData }) {
     </View>
   );
 }
+
+const deviceWidth = Dimensions.get("window").width;
+const deviceHeight = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
   card: {
