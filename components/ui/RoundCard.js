@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     marginTop: 14,
+    marginHorizontal: 18,
     padding: 16,
     backgroundColor: Colors.primary600,
     borderRadius: 16,
