@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
   },
   buttonInnerContainer: {
-    paddingVertical: 8,
+    paddingVertical: 16,
     paddingHorizontal: 16,
     elevation: 2,
     backgroundColor: Colors.primary500,
